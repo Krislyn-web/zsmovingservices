@@ -203,8 +203,12 @@ header {
     padding: 120px 20px 80px;
 
     background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("../images/hero.jpg") center center / cover no-repeat;
+         linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.60)
+    ),
+    url("../images/hero.jpg") center / cover no-repeat;
+Sen
 
     color: var(--white);
 }
