@@ -742,3 +742,16 @@ img {
 /* ==========================================
    End of styles.css
 ========================================== */
+
+/* Header scroll state */
+
+header.scrolled {
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+/* Active navigation link */
+
+.nav-links a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
