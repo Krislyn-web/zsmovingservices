@@ -783,3 +783,37 @@ header.scrolled {
     width: auto;
     display: block;
 }
+.stats-bar {
+    max-width: 1000px;
+    margin: -40px auto 40px;
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.stats-bar strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.stats-bar span {
+    color: var(--gray);
+}
+
+
+@media (max-width: 700px) {
+
+    .stats-bar {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+}
