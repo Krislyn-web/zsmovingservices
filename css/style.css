@@ -776,3 +776,10 @@ header.scrolled {
     margin-bottom: 20px;
     font-size: .95rem;
 }
+/* Company Logo Image */
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
