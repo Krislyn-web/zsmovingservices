@@ -207,7 +207,7 @@ header {
         rgba(0,0,0,.55),
         rgba(0,0,0,.55)
     ),
-    url("../images/hero.jpg") center / cover no-repeat;
+    url("../images/gallery/hero.jpg") center / cover no-repeat;
 Sen
 
     color: var(--white);
