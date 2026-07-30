@@ -264,3 +264,35 @@ footer p {
     cursor:pointer;
     margin-top:25px;
 }
+
+/* Testimonials */
+
+.testimonials{
+    background:#111;
+    color:white;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.testimonials h2{
+    margin-bottom:50px;
+    color:#D4AF37;
+}
+
+.testimonial{
+    max-width:900px;
+    margin:40px auto;
+    background:#222;
+    padding:30px;
+    border-radius:15px;
+}
+
+.testimonial p{
+    font-size:18px;
+    font-style:italic;
+}
+
+.testimonial h3{
+    margin-top:20px;
+    color:#D4AF37;
+}
