@@ -4,17 +4,16 @@
 ========================= */
 
 
-/* Mobile menu toggle */
-
 const menuToggle = document.querySelector(".menu-toggle");
 
 const navLinks = document.querySelector(".nav-links");
 
 
+
 if (menuToggle && navLinks) {
 
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", function () {
 
 
         navLinks.classList.toggle("active");
@@ -27,15 +26,20 @@ if (menuToggle && navLinks) {
 
 
 
-/* Close mobile menu after clicking a link */
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-
-    link.addEventListener("click", () => {
+/* Close menu after selecting a page */
 
 
-        if (navLinks) {
+const navItems = document.querySelectorAll(".nav-links a");
+
+
+navItems.forEach(function(item){
+
+
+    item.addEventListener("click", function(){
+
+
+        if(navLinks){
 
             navLinks.classList.remove("active");
 
