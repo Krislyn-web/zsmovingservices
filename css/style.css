@@ -779,9 +779,9 @@ header.scrolled {
 /* Company Logo Image */
 
 .logo img {
-    height: 55px;
+    height: 60px;
     width: auto;
-    display: block;
+    object-fit: contain;
 }
 .stats-bar {
     max-width: 1000px;
