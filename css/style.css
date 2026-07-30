@@ -779,7 +779,7 @@ header.scrolled {
 /* Company Logo Image */
 
 .logo img {
-    height: 60px;
+    height: 45px;
     width: auto;
     object-fit: contain;
 }
