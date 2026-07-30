@@ -537,6 +537,8 @@ footer {
 
 .nav-links {
 
+    display: none;
+
     position: absolute;
 
     top: 100%;
@@ -553,19 +555,13 @@ footer {
 
     gap: 0;
 
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: .3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
 
 }
 
-
-
 .nav-links.active {
 
-    max-height: 400px;
+    display: flex;
 
 }
 
