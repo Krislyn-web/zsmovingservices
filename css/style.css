@@ -1,0 +1,209 @@
+/* ===============================
+   Z's Moving Services
+   Main Stylesheet
+=============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #D4AF37;
+    --black: #111111;
+    --white: #ffffff;
+    --light: #f5f5f5;
+    --gray: #666666;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--gold);
+    color: var(--black);
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: var(--black);
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--gold);
+}
+
+/* Buttons */
+.quote-button,
+.gold-btn {
+    background: var(--gold);
+    color: var(--black);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quote-button:hover,
+.gold-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.black-btn {
+    background: var(--black);
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: url("../images/hero/hero1.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.hero h3 {
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+/* Trust Section */
+.trust {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+    padding: 80px 8%;
+    background: var(--light);
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* About Preview */
+.about-preview {
+    padding: 80px 8%;
+}
+
+.about-preview h2 {
+    margin-bottom: 20px;
+}
+
+.about-preview p {
+    margin-bottom: 30px;
+    color: var(--gray);
+}
+
+/* Footer */
+footer {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .black-btn {
+        margin-left: 0;
+    }
+}
