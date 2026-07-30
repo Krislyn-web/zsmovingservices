@@ -481,3 +481,109 @@ footer {
 
 
 }
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+
+.menu-toggle {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.menu-toggle span {
+
+    width: 28px;
+
+    height: 3px;
+
+    background: #1f2937;
+
+    border-radius: 5px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.menu-toggle {
+
+    display: flex;
+
+}
+
+
+
+.navbar {
+
+    flex-direction: row;
+
+}
+
+
+
+.nav-links {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: .3s ease;
+
+}
+
+
+
+.nav-links.active {
+
+    max-height: 400px;
+
+}
+
+
+
+.nav-links li {
+
+    padding: 15px;
+
+}
+
+
+
+.quote-button {
+
+    display: none;
+
+}
+
+
+}
