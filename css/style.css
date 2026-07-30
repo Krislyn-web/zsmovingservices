@@ -141,10 +141,15 @@ header {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
+    f    font-size: 1.35rem;
+    font-weight: 800;
     color: var(--primary);
+    letter-spacing: .5px;
     white-space: nowrap;
+}
+
+.logo::first-letter {
+    color: var(--secondary);
 }
 
 .nav-links {
