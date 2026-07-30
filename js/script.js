@@ -1,33 +1,115 @@
-// Sticky Header
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 50);
-});
+/* ==========================================
+   Z's Moving Services
+   script.js
+========================================== */
 
-// Mobile Menu
-const menuButton = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector("nav ul");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (menuButton) {
-    menuButton.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-    });
-}
+    /* ==========================
+       Mobile Navigation
+    ========================== */
 
-// Scroll To Top
-const scrollBtn = document.getElementById("scrollTop");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-window.addEventListener("scroll", () => {
-    if (scrollBtn) {
-        scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    }
-});
+    if (menuToggle && navLinks) {
 
-if (scrollBtn) {
-    scrollBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("active");
         });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                menuToggle.classList.remove("active");
+            });
+
+        });
+
+    }
+
+    /* ==========================
+       Header Scroll Effect
+    ========================== */
+
+    const header = document.querySelector("header");
+
+    function updateHeader() {
+
+        if (window.scrollY > 40) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    }
+
+    updateHeader();
+
+    window.addEventListener("scroll", updateHeader);
+
+    /* ==========================
+       Fade-In Animation
+    ========================== */
+
+    const animatedElements = document.querySelectorAll(
+        ".service-card, .about-content, .gallery-grid img, .contact-wrapper"
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-up");
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
     });
-}
+
+    animatedElements.forEach(element => observer.observe(element));
+
+    /* ==========================
+       Active Navigation Link
+    ========================== */
+
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                pageYOffset >= sectionTop &&
+                pageYOffset < sectionTop + sectionHeight
+            ) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navItems.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+});
